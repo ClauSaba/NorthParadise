@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
     background-image: url('../images/fondoHeader.jpg');
-    background-color: rgb(107, 107, 107);
+    background-color: rgb(83, 83, 83);
     background-blend-mode: overlay;
     background-size:cover;
     background-repeat: no-repeat;
@@ -663,7 +663,8 @@
 @media only screen and (min-width: 1024px) {
     #body{
         background: rgb(207,241,249);
-        background: linear-gradient(45deg, rgb(187, 233, 243) 0%, rgba(250,255,253,1) 34%, rgba(181, 240, 207, 0.74) 100%);display: grid;
+        background: linear-gradient(45deg, rgb(187, 233, 243) 0%, rgba(250,255,253,1) 34%, rgba(181, 240, 207, 0.74) 100%);
+        display: grid;
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -717,6 +718,8 @@
     .btnInicio:hover, .btnUbicacion:hover, .btnServicios:hover, .btnPrecios:hover, .btnGaleria:hover{
         transform: scale(1.4, 1.4);
         transition: .3s;
+        
+        
 
     }
 
@@ -738,13 +741,14 @@
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: center;
-        
+        justify-content: center;    
     }
 
     .mainPanoramica img{
         width: 70%;
-        height: 55vh;    
+        height: 55vh; 
+        border-radius: 15px;
+        box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
     }
     
     .mainArticle{
@@ -823,10 +827,13 @@
     }
 
     .mapaGoogle{
-        height: 55vh;
-        width: 70vw;
-        padding-top: 3vh;
-        grid-area: mapaGoogle;        
+        height: 50vh;
+        width: 65vw;
+        margin-top: 3vh;
+        grid-area: mapaGoogle; 
+        border-radius:  8vh;   
+        box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
+        
     }
 
     .textoComoLLegar{
@@ -889,6 +896,7 @@
         font-size: 2vw;
         font-family: 'Permanent Marker', cursive;
         transform: scale(1.1,1.1);
+        cursor: pointer;
     }
 
 
@@ -995,13 +1003,15 @@
         grid-template-rows: repeat(3, 30vh);
         justify-content: space-around;
         align-items: center;
-        gap: 5px;
+        gap: 15px;
     }
 
     .fotos img{
-        width: 23vw;
+        width: 24vw;
         height: 30vh;
         object-fit: cover;
+        border-radius: 10px;
+
     }
 
     .fotos iframe{

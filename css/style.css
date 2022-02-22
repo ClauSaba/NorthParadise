@@ -718,7 +718,7 @@
     .btnInicio:hover, .btnUbicacion:hover, .btnServicios:hover, .btnPrecios:hover, .btnGaleria:hover{
         transform: scale(1.4, 1.4);
         transition: .3s;
-        
+        text-shadow: rgb(248, 243, 216) 0vw 0vh 30px;
         
 
     }
@@ -889,13 +889,12 @@
     }
 
     .btnEnviar:hover{
-        background: green;
-        color: white;
-        border: 3px solid black;
+        background: rgb(154, 255, 154);
+        box-shadow: 1vw 2vh 6vh rgb(154, 255, 154);
         border-radius: 10px;
-        font-size: 2vw;
+        font-size: vw;
         font-family: 'Permanent Marker', cursive;
-        transform: scale(1.1,1.1);
+        transform: scale(.9,.9);
         cursor: pointer;
     }
 
@@ -912,7 +911,7 @@
 
     .tituloServicios{
         grid-area: tituloServicios;
-        font-size: 5vw;
+        font-size: 7vw;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         -webkit-text-stroke: 1px rgb(255, 255, 255);
@@ -951,14 +950,19 @@
         grid-template-areas:"tituloPrecios articlePrecio textoVerifique calendario ";
         padding-top: 3vh;
         justify-content: space-around;
+        justify-items: center;
         align-items: center;    
     }
     .calendario{
         grid-area: calendario;
+        width: 30vw;
+        height: 45vh;        
     }
 
     .calendario iframe{
-        width:90%;
+        width:30vw;
+        height: 45vh;
+        border-radius: 10px;
     }
 
     .tituloPrecios{
@@ -966,7 +970,7 @@
         font-size: 3.5vw;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
-        -webkit-text-stroke: .5px rgb(255, 255, 255);
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
         width: 100%;
     }
     .articlePrecios{
@@ -1015,6 +1019,7 @@
     }
 
     .fotos iframe{
+
         width: 95%;
         height: 30vh; 
         object-fit: cover;

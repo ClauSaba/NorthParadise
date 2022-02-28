@@ -1,88 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quinta Vacacional North Paradise</title>
-    <link rel="shortcut icon" href="../images/faviconPiletaSolGrande.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quinta Vacacional North Paradise</title>
+        <link rel="shortcut icon" href="images/faviconPiletaSolGrande.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">    
 </head>
 
-<body id="body">
+<body class="body">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary text-white ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
 
-    <header class="header">
-        <h1 class="headerLogo">North Paradise</h1>
-        <h2 class="headerSlogan">Naturaleza y tranquilidad a pocos minutos de la ciudad</h2>       
-        <div class="menuMobile">
-            <i class="fa-solid fa-bars"></i>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav  mb-2 ">
+                    <li class="nav-item  mt-2 ms-5"><a class="nav-link active" aria-current="page" href="../index.html">Inicio</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="ubicacion.html">Ubicación</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="precios.html">Precios</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="galeria.html">Galeria</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <header class="header container contenedorHeader">
+        <div class=" container d-flex flex-column align-items-end justify-content-center ">
+            <h1 class="headerLogo animate__animated animate__tada text-light ">North Paradise</h1>
+            <h2 class="headerSlogan animate__animated animate__fadeInTopLeft text-light">Naturaleza y tranquilidad a pocos minutos de la ciudad</h2>
+        </div> 
     </header>
 
-    <nav class="nav">
-        <ul class="navItems">
+    <nav class="nav container">
+        <ul class=" container navItems d-flex justify-content-end align-items-center justify-content-sm-evenly justify-content-lg-end mb-0 ">
             <li class="btnInicio"> <a href="../index.html">Inicio</a></li>
-            <li class="btnUbicacion"> <a href="./ubicacion.html">Ubicación</a></li>
-            <li class="btnServicios"> <a href="./servicios.html">Servicios</a></li>
-            <li class="btnPrecios"> <a href="./precios.html">Precios</a></li>
-            <li class="btnGaleria"> <a href="./galeria.html">Galería</a></li>
-        </ul>
+            <li class="btnUbicacion"> <a href="ubicacion.html">Ubicación</a></li>
+            <li class="btnServicios"> <a  href="servicios.html">Servicios</a></li>
+            <li class="btnPrecios"> <a href="precios.html">Precios</a></li>
+            <li class="btnGaleria"> <a href="galeria.html">Galeria</a></li>
     </nav>
-    
+
     <main class="main">
-        <section class="fotosGaleria">
-            <div class="fotos"><img src="../images/exterior1.jpg" alt=""></div>
-            <div class="fotos"><img src="../images/interior1.jpg" alt=""></div>
-            <div class="fotos"><iframe width="600" height="400" src="https://www.youtube.com/embed/MN8Y0m0YaeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="fotos"><h2><a href="https://www.google.com/search?channel=nrow5&client=firefox-b-d&q=fotos+paisajes"> Más Fotos</a></h2></div>
-        </section>
-        <section class="galeriaTablet" >
-            <h2 class="tituloGaleria">Galeria de Fotos</h2>
-            <div class="fotosGaleriaTablet">
-                <div class="fotos"><img src="../images/exterior1.jpg" alt=""></div>
-                <div class="fotos"><img src="../images/interior1.jpg" alt=""></div>
-                <div class="fotos"><img src="../images/exterior2.jpg" alt=""> </div>
-                <div class="fotos"><img src="../images/interior2.jpg" alt=""> </div>
-                <div class="fotos"><iframe width="600" height="400" src="https://www.youtube.com/embed/MN8Y0m0YaeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="fotos"><h2><a href="https://www.google.com/search?channel=nrow5&client=firefox-b-d&q=fotos+paisajes"> Más Fotos </a></h2></div>
+        <section class="fotosGaleria container d-flex flex-column flex-lg-column-reverse justify-content-evenly mt-4 align-items-center">
+            <div class="fotos mb-lg-5"><h2>Recorrida 360°</h2><iframe width="600" height="400" src="https://www.youtube.com/embed/MN8Y0m0YaeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner mb-1 mt-4 mb-lg-5"><h2>Carrousel de fotos</h2>
+                    <div class="carousel-item active ">
+                        <img src="../images/exterior1.jpg" class="d-block " alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/exterior2.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/exterior3.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/exterior4.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/exterior5.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/exterior6.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/exterior7.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/interior1.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/interior2.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/interior3.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/interior4.jpg" class="d-block" alt="...">
+                    </div>
+                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="fotosGaleriaPC">
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="500" ><img src="../images/exterior1.jpg" alt=""></div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="1000" ><img src="../images/interior1.jpg" alt=""></div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="1500" ><img src="../images/exterior2.jpg" alt=""> </div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="2000" ><img src="../images/interior2.jpg" alt=""> </div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="500" ><img src="../images/exterior3.jpg" alt=""> </div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="1000" ><img src="../images/interior3.jpg" alt=""> </div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="1500" ><img src="../images/exterior4.jpg" alt=""> </div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="2000" ><img src="../images/exterior5.jpg" alt=""> </div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="500" ><img src="../images/exterior6.jpg" alt=""> </div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="1000" ><img src="../images/exterior7.jpg" alt=""> </div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="1500" ><img src="../images/interior4.jpg" alt=""> </div></div>
-                <div class="fotos"><div  data-aos="flip-left" data-aos-duration="2000" ><iframe width="600" height="400" src="https://www.youtube.com/embed/MN8Y0m0YaeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> </div>
-            </div>
+            <div class="fotos btn btn-outline-primary align-self-end me-5 mb-4 mt-3 shadow p-3 mb-3 bg-body rounded d-lg-none"><h2><a href="https://www.google.com/search?channel=nrow5&client=firefox-b-d&q=fotos+paisajes"> Más Fotos</a></h2></div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class=" container footer d-flex flex-column-reverse justify-content-center align-items-center justify-content-sm-between align-items-sm-center flex-lg-row justijy-lg-content-between align-items-lg-center ">
         <h6 class="footerCopyRight">© 2022 todos los derechos reservados</h6>
-        <ul class="socialMediaLinks">
+        <ul class="socialMediaLinks ps-0 sm-mb-0">
             <li class="btnFB"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
             <li class="btnTW"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
             <li class="btnIG"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
             <li class="btnWA"><a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp-square"></i></a></li>
-            <li class="btnMail"><a href="./ubicacion.html"><i class="fas fa-envelope-square"></i></a></li>
+            <li class="btnMail"><a href="../pages/ubicacion.html"><i class="fas fa-envelope-square"></i></a></li>
         </ul>
         <h6 class="footerExternalLink"><a href="https://www.argentina.gob.ar/turismoydeportes" target="_blank">municipio.com/turismo</a></h6>
     </footer>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>  
+    </script>
 </body>
 
 </html>

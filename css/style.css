@@ -2,39 +2,22 @@
     margin: 0;
     padding: 0;
 }
+.body{
+    background: rgb(207,241,249);
+    background: linear-gradient(45deg, rgb(187, 233, 243) 0%, rgba(250,255,253,1) 34%, rgba(181, 240, 207, 0.74) 100%);
+}
 
 /*-----HEADER-----*/
-.header{
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/fondoHeader.jpg');
-    background-color: rgb(83, 83, 83);
+.contenedorHeader{
+    background-image: url('../images/fondoHeaderEditado.jpg');
+    background-color: rgb(100, 100, 100);
     background-blend-mode: overlay;
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-}
-
-.headerLogo{
-    font-family:'Courgette', cursive; 
-    color: rgb(240, 255, 255) ;
-    -webkit-text-stroke: .1px rgb(19, 97, 4);
-}
-
-.headerSlogan{
-    font-family: 'Courgette', cursive; 
-    color: rgb(240, 255, 255);
-        
+    font-family: 'Courgette', cursive;
+    background-size: cover;
+    height: 35vh;
 }
 
     /*-----NAV-----*/
-.nav{
-    height: 100%;
-    width: 100%;
-    background-color: rgb(106, 212, 106);    
-    border-top: solid white 3px;   
-}
 
 .navItems{
     list-style-type: none;
@@ -43,16 +26,10 @@
 .navItems li a{
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 3vw;
     font-family: 'Permanent Marker', cursive;
     padding-right: 3vw;
 
-}
-
-/*-----ARTICLE-----*/
-.mainArticle{
-    height: 100%;
-    width: 100%;
 }
 
 .mainArticle p, .textoServicios, .sectionLMapa p, .textoPrecios{
@@ -61,36 +38,26 @@
 }
 
 /*-----FOOTER-----*/
-.footer{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(203, 234, 241);
-    justify-content: space-evenly ;
-    align-items: center;
-    border-bottom: solid white 3px;  
-    border-top: solid white 3px; 
-    
+.footer{  
+    border-top: solid rgb(0, 0, 0) 3px;     
 }
 
 .footerCopyRight{
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-left: 10px;
+    font-size: 2vmin;
 }
 
 .socialMediaLinks{
-    color: white;
-    font-size: 16px;
+    font-size: 5vw;
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    width: 20%;
+    width: 80%;
 }
 
 .socialMediaLinks li i{
-    font-size: 30px;
-    
+    font-size: 8vh;
 }
 /*  ICONOS FOOTER   */
 .fa-twitter-square{
@@ -109,135 +76,62 @@
     color: black;
 }
 
-.tituloFormulario, .tituloServicios, .tituloPrecios, .textoVerifique, .tituloVideo{
+.tituloFormulario, .tituloServicios, .tituloPrecios, .textoVerifique, .tituloVideo, .fotos h2, .carousel-inner h2{
     font-family: 'Permanent Marker'; 
-    font-size: 5vw;
+    font-size: 4vw;
     color: black;
     width: 100%;   
     text-align: center;
     padding: 2vh 0;    
 }
 
-@media only screen and (max-width: 600px) {
-    #body{
-        background: rgb(207,241,249);
-        background: linear-gradient(45deg, rgb(187, 233, 243) 0%, rgba(250,255,253,1) 34%, rgba(181, 240, 207, 0.74) 100%);display: grid;
-        display: grid;
-        justify-content: space-between;
-        align-items: center;
-        width: 100vw;
-        grid-template-columns: 100vw;
-        grid-template-rows: 1fr 4fr 0.25fr .5fr;  
-        grid-template-areas: "header"
-                            "main"
-                            "nav"
-                            "footer";
-    }
 
+@media only screen and (max-width: 575px) {
+
+    .navbar{
+        position: absolute;
+        margin-top: 3vh;
+        margin-left: 2vw;
+    }
+    
     .header{
-        height: 100%;
-        width: 100%;
+        height: 30vh;    
         border: solid white 3px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        grid-area: header;
     }
 
     .headerLogo{ 
-        font-size: 10vw;  
+        font-size: 9vw;  
         padding-left: 5vw; 
         padding-top: 8vh;
 
     }
     .headerSlogan{
-        font-size: 3vw; 
+        font-size: 2.5vw; 
         padding-left: 3vw; 
         
     }
-    .menuMobile{
-        color: white;
-        -webkit-text-stroke: 1px rgb(19, 97, 4);
-        font-size:6vh;
-        padding-right: 10px;
-        position: absolute;
-        right: 10px;
-        top: 25px;
-    }
-
     .nav{
-        grid-area: nav;
-        height: 7vh;
-        width: 100%;
-        background-color: rgb(203, 234, 241);  
-        border-top: solid white 3px; 
-    }
-
-    .navItems{
-        height: 100%;
-        display: flex;
-        flex-direction:row;
-        justify-content:space-evenly;
-        align-items: center;
-    }
-
-    .navItems li a{
-        font-size: 2vh;
-        list-style-type: none;
-    }
-
-    .main{
-        grid-area: main;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 2vh 0;
-    }
-
-    .mainPanoramica{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;  
-        justify-content: center;  
+        display: none;
     }
 
     .mainPanoramica img{
-        width: 90%;
-        height: 90%;
+        height: 45vh;
+        width: 100%; 
+        border-radius: 15px;
+        box-shadow: 5px 3px 5px 5px rgba(87, 93, 95, 0.2);
+        margin-top: 5vh;
     }
 
-    .mainArticle{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .mainArticle p, .textoServicios, .articleServicios{
+    .mainArticle p, .textoServicios, .articleServicios, .parrafoComoLlegar, .articlePrecios p{
         font-size: 3.5vw;
         width: 90%;
-        text-align: left;
-        padding: 2vh 0;    
+        text-align: justify;
+        padding: 1vh 0;    
     }
-
+    
     .footer{
-        grid-area: footer;
-        height: 100px;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    .footerCopyRight{
-        order: 2;
-    }
-
-    .socialMediaLinks li{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 0 10px;
+        height: 25vh;        
+        background-color: rgb(203, 234, 241);
     }
 
     .footerExternalLink{
@@ -249,36 +143,20 @@
         display: none;
     }
 
-    .sectionLMapa{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
     .sectionLMapa iframe{
         height: 40vh;
         width: 90%;
-        order: 2;
+        
+        border-radius:  8vh;   
+        box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
+        margin: 2vh 0;
     }
     .tituloComoLlegar{
         font-size: 3.5vw;
         font-family: 'Permanent Marker';
+        padding: 2vh 0;
     }
 
-    .textoComoLLegar{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .parrafoComoLlegar{
-        text-align: center;
-        font-size: 2.5vw;
-        width: 90%;
-        padding-bottom: 2vh;
-    }
     .tituloFormulario{
         text-align: center;
         padding-top: 1.5vh;
@@ -294,9 +172,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 2vh;
+        padding: 2vh 0 4vh 0;
         width: 90%;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .fotoIngreso{
+        display: none;
     }
 
     /*servicios*/
@@ -310,14 +192,15 @@
         padding: 1vw;
         text-align: center;
         color: rgb(25, 54, 2) ;
-        -webkit-text-stroke: 2px rgb(19, 97, 4);
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+        text-shadow: 0 0 10px ;
     }
 
     .mainArticleServicios{
         display: flex;
         flex-direction: column;
         align-items: center;
-}
+    }
 
     /*precios*/
 
@@ -326,8 +209,8 @@
     }
 
     .calendario iframe{
-        width: 100%;
-        padding: 5vh 0 2vh 0;
+        width: 70vw;
+        margin-bottom: 3vh;
     }
 
     .articlePrecios{
@@ -337,108 +220,59 @@
     }
 
     .textoPrecios{
-        padding-top: 3vh;
+        padding-top: 2vh;
         width: 90%;
     }
 
     .textoVerifique{
-        padding-top: 5vh;
+        padding-top: 3vh;
     }
 
     /*galeria*/
 
-    .fotos{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(4 30vh);
-        gap: 15px;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .fotos img{
-        width: 100%;
-        height: 30vh;
+    .carousel-item img, .fotos iframe{
+        width: 90vw;
+        height: 50vh;
         padding-bottom: 2vh;
+        object-fit: cover;
     }
 
-    .fotos iframe{
-        width: 100%;
-        height: 40vh; 
+    .fotos h2 a{
+        font-family: 'Permanent Marker', cursive;
+        text-decoration: none;
+        font-size: 3vw;
     }
+}    
 
-    .galeriaTablet, .fotosGaleriaPC{
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+
+    .navbar{
         display: none;
     }
 
-}
-
-@media only screen and (max-width: 1023px) and (min-width: 601px) {
-    #body{
-        background: rgb(207,241,249);
-        background: linear-gradient(45deg, rgba(207,241,249,1) 0%, rgba(250,255,253,1) 34%, rgba(215,237,225,0.74) 100%);
-        display: grid;
-        display: grid;
-        justify-content: space-between;
-        align-items: center;
-        width: 100vw;
-        grid-template-columns: 100vw;
-        grid-template-rows: 1.2fr .3fr 5fr 1fr;  
-        grid-template-areas:"header"
-                            "nav"
-                            "main"
-                            "footer";
-    }
-
-    .header{
-        height: 100%;
-        width: 100%;
-        border: solid white 3px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        grid-area: header;
-    }
-
     .headerLogo{ 
-        font-size: 10vw;  
+        font-size: 7vw;  
         padding-left: 5vw; 
-        padding-top: 8vh;
+        padding-top: 10vh;
     }
 
     .headerSlogan{
-        font-size: 3vw; 
+        font-size: 2vw; 
         padding-left: 3vw;     
     }    
     
     .nav{
-        grid-area: nav;
-        width: 100%;
-        height: 80%;
-        background-color: rgb(203, 234, 241);  
-        border-top: solid white 3px;     
-    }
-
-    .navItems{
-        height: 100%;
-        display: flex;
-        flex-direction:row;
-        justify-content:space-evenly;
-        align-items: center;    
-    }
+        background-color: rgb(156, 226, 241);  
+        border-top: solid white 3px;  
+        border-bottom: solid white 3px; 
+        height: 7vh;    
+        position: sticky;
+        top: 0;  
+    }  
 
     .navItems li a{
         font-size: 3vh;
         list-style-type: none;
-    }
-
-    .main{
-        grid-area: main;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .mainPanoramica{
@@ -449,40 +283,31 @@
     }
     
     .mainPanoramica img{
-        width: 90%;
-        height: 100%;
+        height: 45vh;
+        width: 100%; 
+        border-radius: 15px;
+        box-shadow: 5px 3px 5px 5px rgba(87, 93, 95, 0.2);
+        margin-top: 5vh;
     }
 
-    .mainArticle{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .mainArticle p, .textoServicios, .articleServicios, .textoPrecios{
+    .mainArticle p, .textoServicios, .articleServicios, .tituloComoLlegar, .textoPrecios{
         font-size: 2.5vw;
-        width: 90%;
-        text-align: left;
+        width: 95%;
+        text-align: justify;
         padding-bottom: 3vh;    
     }
 
     .footer{
-        grid-area: footer;
-        height: 100%;
-        flex-direction: column;
-        justify-content: space-evenly;
+        height: 25vh;
     }
 
     .footerCopyRight{
-        order: 2;
         font-size: 2vh;
+        margin-bottom: 2vh;
     }
 
     .socialMediaLinks li{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 0 3vw;
+        margin-top: 5vh;
     }
 
     .socialMediaLinks li i{
@@ -499,32 +324,17 @@
         display: none;
     }
 
-    .sectionLMapa{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
     .tituloComoLlegar{
         font-family: 'Permanent Marker'; 
         font-size: 3.5vw;
-        color: black;
-        width: 100%;   
+        color: black;  
         text-align: center;
+        margin-top: 4vh;
     }
 
-    .textoComoLLegar{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
     .parrafoComoLlegar{
         text-align: center;
         font-size: 2.5vw;
-        width: 90%;
         padding-bottom: 2vh;
     }
     .tituloFormulario{
@@ -532,10 +342,12 @@
         padding-top: 1.5vh;
     }
 
-    .sectionLMapa iframe{
+    .mapaGoogle{
         height: 50vh;
-        width: 90%;
-        order: 2;
+        width: 65vw;
+        margin-top: 5vh;
+        border-radius:  8vh;   
+        box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
     }
 
     .sectionLMapa h2{
@@ -563,20 +375,25 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
+    .fotoIngreso{
+        display: none;
+    }
+
 
     /*servicios*/
 
     .tituloServicios{
         font-size: 7vw;
-        padding: 0 0 5vh 0;
+        padding-top: 4vh;
     }
 
     .iconosServicios {
-        font-size: 15vw;
+        font-size: 10vw;
         padding-bottom: 3vw;
         text-align: center;
         color: rgb(25, 54, 2) ;
-        -webkit-text-stroke: 2px rgb(19, 97, 4);
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+        text-shadow: 0 0 10px ;
     }
 
     .mainArticleServicios{
@@ -597,8 +414,8 @@
     }
 
     .calendario iframe{
-        width:80vw;        
-        padding: 5vh 0 2vh 0;
+        width:60vw;        
+        padding: 0 0 5vh 0;
     }
 
     .articlePrecios{
@@ -607,120 +424,70 @@
         align-items: center;
     }
 
+    .tituloPrecios{
+        margin-top: 3vh;
+    }
+
     .textoPrecios{
-        padding-top: 3vh;
+        padding-top: 2vh;
         width: 90%;
     }
 
     .textoVerifique{
-        padding-top: 5vh;
+        padding-top: 3vh;
     }
 
     /*galeria*/
 
-    .fotosGaleria , .fotosGaleriaPC{
-        display: none;
-    }
-
-    .tituloGaleria{
-        font-family: 'Permanent Marker', cursive;
-        font-size: 5vw;
-        color: black;
-        text-align: center;
-        padding-bottom: 4vh;
-    }
-
-    .fotosGaleriaTablet{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: repeat(3 30vh);
-        gap: 15px;
-        justify-content: space-evenly;
-        align-items: center;
-        justify-items: center;
-        padding-bottom: 3vh;
-    }
-
-    .fotos img{
-        width: 100%;
+    .fotos img, .fotos iframe{
+        width: 80vw;
         height: 40vh;
         padding-bottom: 2vh;
     }
 
-    .fotos iframe{
-        width: 100%;
-        height: 40vh; 
+
+    .carousel-item img{
+        width: 80vw;
+        height: 60vh; 
     }
 
     .fotos h2 a{
         font-family: 'Permanent Marker', cursive;
         text-decoration: none;
-        font-size: 5vw;
+        font-size: 3vw;
     }
 
 }
 
-@media only screen and (min-width: 1024px) {
-    #body{
-        background: rgb(207,241,249);
-        background: linear-gradient(45deg, rgb(187, 233, 243) 0%, rgba(250,255,253,1) 34%, rgba(181, 240, 207, 0.74) 100%);
-        display: grid;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: 100%;
-        grid-template-rows: 35vh 7vh 100vh 15vh;  
-        grid-template-areas:"header "
-                            "nav"
-                            "main "
-                            "footer";
-    }
+@media only screen and (min-width: 992px) {
 
-    .header{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
-        grid-area: header;
+    .navbar{
+        display: none;
     }
 
     .headerLogo{ 
         font-size: 5vw;  
-        padding-right: 8vw;
-        -webkit-text-stroke: .5px rgb(19, 97, 4);
+        padding-right: 3vw;
+        padding-top: 10vh;
+        -webkit-text-stroke: 2px rgb(19, 97, 4);
     }
 
     .headerSlogan{
         font-size: 1.5vw; 
-        padding-right: 7vw;       
+        padding-right: 2vw;       
     }    
     
     .nav{
-        grid-area: nav;
-        width: 100%;
-        height: 100%;
         background-color: rgb(156, 226, 241);  
         border-top: solid white 3px;  
-        border-bottom: solid white 3px;       
-    }
-
-    .navItems{
-        height: 100%;
-        display: flex;
-        flex-direction:row;
-        justify-content:flex-end;
-        align-items:center;    
+        border-bottom: solid white 3px; 
+        height: 7vh;      
     }
     
     .btnInicio:hover, .btnUbicacion:hover, .btnServicios:hover, .btnPrecios:hover, .btnGaleria:hover{
         transform: scale(1.4, 1.4);
         transition: .3s;
         text-shadow: rgb(248, 243, 216) 0vw 0vh 30px;
-        
-
     }
 
     .navItems li a{
@@ -729,61 +496,44 @@
         -webkit-text-stroke: .5px rgb(255, 255, 255);
     }
 
-    .mainIndex{
-        height: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        align-items: center;
-        
-    }
-    .mainPanoramica{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;    
-    }
-
     .mainPanoramica img{
-        width: 70%;
-        height: 55vh; 
+        height: 65vh; 
         border-radius: 15px;
         box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
+        margin-bottom: 5vh;
     }
     
     .mainArticle{
-        width: 100%;
-        height: 55vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 2vh 0;
-
+        margin-top: 4vh;
+        margin-bottom: 3vh;
     }
 
     .mainArticle p, .textoServicios, .sectionLMapa p, .articleServicios, .textoPrecios{
         font-size: 1.3vw;
         width: 90%;
-        text-align: justify;        
+        text-align: justify; 
+        padding: 2vh 0;    
     }
 
     .footer{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 95%;
-        background-color: rgb(156, 226, 241);
+        height: 20vh;
+        border-top: solid 3px black;
     }
     
     .footerCopyRight{
-        font-size: .8vw;
+        font-size: 1vw;
+        margin-bottom: 0%;
     }
 
-    .socialMediaLinks li{
+    .socialMediaLinks{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-around;
+        list-style-type: none;
+        width: 40%;
+    }
+
+    .socialMediaLinks li a i{
+        font-size: 7vh;
         margin: 0 1vw;
     }
 
@@ -803,37 +553,14 @@
     }
 
     /*Ubicacion*/
-    .formulario{
-        display: none;
-    }
-
-    .mainUbicacion{
-        height: 100%;
-        width: 100%;        
-    }
-
-    .sectionLMapa{
-        height: 100%;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 60vh 40vh;
-        grid-template-areas:"mapaGoogle mapaGoogle"
-                            "textoComoLLegar formularioPC";
-        justify-items: center;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-    }
 
     .mapaGoogle{
-        height: 50vh;
-        width: 65vw;
-        margin-top: 3vh;
-        grid-area: mapaGoogle; 
+        height: 60vh;
+        width: 75vw;
+        margin-top: 5vh;
+        margin-bottom: 3vh;
         border-radius:  8vh;   
         box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
-        
     }
 
     .textoComoLLegar{
@@ -841,31 +568,30 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        height: 100%;
-        width: 100%;
-        grid-area: textoComoLLegar;
-        padding-top: 3vh;
     }
 
     .sectionLMapa h2{
         font-family: 'Permanent Marker', cursive;
-        padding: 3vh 0;    
+        padding: 2vh 5vh;    
     }
 
-    .formularioPC{
-        grid-area: formularioPC;
+    .formulario{
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
+        justify-content: space-around;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 30vw;
+        height: 43vh;
+        margin: 5vh 0;
+    }
+
+    .fotoIngreso{
+        width: 30vw;
+        height: 42vh; 
+        border-radius: 15px;
     }
 
     .tituloFormulario{
-        height: 100%;
-        width: 5vw;
         text-align: center;
         -webkit-text-stroke: .5px rgb(255, 255, 255);
         font-size: 2.5vw;    
@@ -876,6 +602,7 @@
 
     .formularioContacto{
         width: 30vw;
+        height: 50vh;
         display: flex;
         flex-direction: column;        
     }
@@ -901,33 +628,32 @@
 
     /*servicios*/
 
-    .mainServicios{
-        display: grid;
-        grid-template-columns: 25% 30% 45%;
-        grid-template-rows:  80vh;
-        grid-template-areas:"tituloServicios iconosServicios mainArticleServicios";
-        padding-top: 3vh;
-    }
-
     .tituloServicios{
-        grid-area: tituloServicios;
         font-size: 7vw;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         -webkit-text-stroke: 1px rgb(255, 255, 255);
+        width: 15vw;
+        text-align: center;
     }
 
     .iconosServicios {
-        grid-area: iconosServicios;
         font-size: 7vw;        
-        text-align: center;
         color: rgb(25, 54, 2) ;
         -webkit-text-stroke: 4px rgb(255, 255, 255);
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;    
+        justify-content: center;  
+        color: rgb(25, 54, 2) ;
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+        text-shadow: 0 0 10px ; 
+        width: 25vw; 
+        text-align: center;
     }
 
+    .iconosServicios i{
+        padding: 4vh;
+    }    
 
     .fa-user-shield:hover, .fa-wifi:hover, .fa-car:hover, .fa-broom:hover{
         transform: scale(1.2, 1.2);
@@ -935,94 +661,62 @@
     }
 
     .mainArticleServicios{
-        grid-area: mainArticleServicios; 
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;       
+        justify-content: center;
     }
 
     /*precios*/
 
     .mainPrecios{
-        display: grid;
-        grid-template-columns: 8% 38% 8% 38%;
-        grid-template-rows:  80vh;
-        grid-template-areas:"tituloPrecios articlePrecio textoVerifique calendario ";
         padding-top: 3vh;
-        justify-content: space-around;
-        justify-items: center;
-        align-items: center;    
     }
     .calendario{
-        grid-area: calendario;
         width: 30vw;
         height: 45vh;        
     }
 
     .calendario iframe{
-        width:30vw;
+        width:33vw;
         height: 45vh;
         border-radius: 10px;
     }
 
     .tituloPrecios{
-        grid-area: tituloPrecios;
-        font-size: 3.5vw;
+        font-size: 2.5vw;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         -webkit-text-stroke: 2px rgb(255, 255, 255);
-        width: 100%;
+        width:auto;
+        text-align: center;
     }
     .articlePrecios{
-        grid-area: articlePrecio;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     .textoPrecios{
-        width: 90%;
         font-size: 1.5vw;
-        padding-bottom: 3vh;
+        padding-bottom: 2vh;
     }
     .textoVerifique{
-        grid-area: textoVerifique;
-        padding-top: 5vh;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         font-family: 'Permanent Marker'; 
-        font-size: 3.5vw;
+        font-size: 2.5vw;
         color: black;
-        -webkit-text-stroke: .5px rgb(255, 255, 255);        
+        -webkit-text-stroke: .5px rgb(255, 255, 255);    
+        width: auto;    
     }
 
-    .fotosGaleria, .fotosGaleriaTablet{
-        display: none;
-    }
-    .tituloGaleria{
-        display: none;
-    }
-    .fotosGaleriaPC{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 30vh);
-        justify-content: space-around;
-        align-items: center;
-        gap: 15px;
-    }
+    /*galeria*/
 
-    .fotos img{
-        width: 24vw;
-        height: 30vh;
+    .carousel-item img, .fotos iframe{
+        width: 70vw;
+        height: 70vh;
         object-fit: cover;
         border-radius: 10px;
-
-    }
-
-    .fotos iframe{
-
-        width: 95%;
-        height: 30vh; 
-        object-fit: cover;
     }
 
 }

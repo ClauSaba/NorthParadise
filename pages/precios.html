@@ -10,34 +10,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">    
 </head>
 
-<body id="body">
+<body class="body">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary text-white ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
 
-    <header class="header">
-        <h1 class="headerLogo">North Paradise</h1>
-        <h2 class="headerSlogan">Naturaleza y tranquilidad a pocos minutos de la ciudad</h2>       
-        <div class="menuMobile">
-            <i class="fa-solid fa-bars"></i>
-    </header>
-
-    <nav class="nav">
-        <ul class="navItems">
-            <li class="btnInicio"> <a href="../index.html">Inicio</a></li>
-            <li class="btnUbicacion"> <a href="./ubicacion.html">Ubicación</a></li>
-            <li class="btnServicios"> <a href="./servicios.html">Servicios</a></li>
-            <li class="btnPrecios"> <a href="./precios.html">Precios</a></li>
-            <li class="btnGaleria"> <a href="./galeria.html">Galería</a></li>
-        </ul>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav  mb-2 ">
+                    <li class="nav-item  mt-2 ms-5"><a class="nav-link active" aria-current="page" href="../index.html">Inicio</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="ubicacion.html">Ubicación</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="precios.html">Precios</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="galeria.html">Galeria</a></li>
+                </ul>
+            </div>
     </nav>
 
-    <main class="main mainPrecios">
-        <div class="calendario">
-            <iframe src="https://calendar.google.com/calendar/embed?src=claudio.sabatini.argentina%40gmail.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="800" height="300" frameborder="0" scrolling="no"></iframe>
-        </div>
-        <h2 class="tituloPrecios">
+    <header class="header container contenedorHeader">
+        <div class=" container d-flex flex-column align-items-end justify-content-center ">
+            <h1 class="headerLogo animate__animated animate__tada text-light ">North Paradise</h1>
+            <h2 class="headerSlogan animate__animated animate__fadeInTopLeft text-light">Naturaleza y tranquilidad a pocos minutos de la ciudad</h2>
+        </div> 
+    </header>
+
+    <nav class="nav container">
+        <ul class=" container navItems d-flex justify-content-end align-items-center justify-content-sm-evenly justify-content-lg-end mb-0 ">
+            <li class="btnInicio"> <a href="../index.html">Inicio</a></li>
+            <li class="btnUbicacion"> <a href="ubicacion.html">Ubicación</a></li>
+            <li class="btnServicios"> <a  href="servicios.html">Servicios</a></li>
+            <li class="btnPrecios"> <a href="precios.html">Precios</a></li>
+            <li class="btnGaleria"> <a href="galeria.html">Galeria</a></li>
+    </nav>
+
+    <main class="main mainPrecios container d-flex flex-column flex-lg-row justify-content-lg-evenly align-items-lg-center align-items-center justify-content-evenly">
+        <h2 class="tituloPrecios col-lg-1">
             <div  data-aos="fade-up"
                 data-aos-offset="100"
                 data-aos-delay="50"
@@ -45,11 +58,11 @@
                 data-aos-anchor-placement="top-center">Temporada 2022
             </div>
         </h2>
-        <article class="articlePrecios">
+        <article class="articlePrecios col-lg-5">
             <p class="textoPrecios">Se considera temporada alta desde noviembre hasta marzo, en ese periodo el alquiler semanal (estancia mínima) es de u$s 999, debiéndose reservar con un 30% de anticipo. Alquilando por quincena 10% y de forma mensual 20% de descuento.</p>
             <p class="textoPrecios">Para el resto del año se puede alquilar por día con un precio de $99, ideal para desconectar, reunirse con amigos o familia, festejar cumpleaños o aniversarios, o simplemente tomarse unos días de tranquilidad en pareja.</p>
         </article>
-        <h2 class="textoVerifique">
+        <h2 class="textoVerifique col-lg-1">
             <div  data-aos="fade-up"
                 data-aos-offset="100"
                 data-aos-delay="50"
@@ -57,19 +70,25 @@
                 data-aos-anchor-placement="top-center">Fechas disponibles
             </div>
         </h2>
+        <div class="calendario col-lg-5">
+            <iframe src="https://calendar.google.com/calendar/embed?src=claudio.sabatini.argentina%40gmail.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="800" height="300" frameborder="0" scrolling="no"></iframe>
+        </div>
     </main>
 
-    <footer class="footer">
+    <footer class=" container footer d-flex flex-column-reverse justify-content-center align-items-center justify-content-sm-between align-items-sm-center flex-lg-row justijy-lg-content-between align-items-lg-center ">
         <h6 class="footerCopyRight">© 2022 todos los derechos reservados</h6>
-        <ul class="socialMediaLinks">
+        <ul class="socialMediaLinks ps-0 sm-mb-0">
             <li class="btnFB"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
             <li class="btnTW"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
             <li class="btnIG"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
             <li class="btnWA"><a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp-square"></i></a></li>
-            <li class="btnMail"><a href="./ubicacion.html"><i class="fas fa-envelope-square"></i></a></li>
+            <li class="btnMail"><a href="../pages/ubicacion.html"><i class="fas fa-envelope-square"></i></a></li>
         </ul>
         <h6 class="footerExternalLink"><a href="https://www.argentina.gob.ar/turismoydeportes" target="_blank">municipio.com/turismo</a></h6>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();

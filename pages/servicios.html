@@ -1,76 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quinta Vacacional North Paradise</title>
-    <link rel="shortcut icon" href="../images/faviconPiletaSolGrande.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quinta Vacacional North Paradise</title>
+        <link rel="shortcut icon" href="images/faviconPiletaSolGrande.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">    
 </head>
 
-<body id="body">
+<body class="body">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary text-white ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
 
-    <header class="header">
-        <h1 class="headerLogo">North Paradise</h1>
-        <h2 class="headerSlogan">Naturaleza y tranquilidad a pocos minutos de la ciudad</h2>       
-        <div class="menuMobile">
-            <i class="fa-solid fa-bars"></i>
-    </header>
-
-    <nav class="nav">
-        <ul class="navItems">
-            <li class="btnInicio"> <a href="../index.html">Inicio</a></li>
-            <li class="btnUbicacion"> <a href="./ubicacion.html">Ubicación</a></li>
-            <li class="btnServicios"> <a href="./servicios.html">Servicios</a></li>
-            <li class="btnPrecios"> <a href="./precios.html">Precios</a></li>
-            <li class="btnGaleria"> <a href="./galeria.html">Galería</a></li>
-        </ul>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav  mb-2 ">
+                    <li class="nav-item  mt-2 ms-5"><a class="nav-link active" aria-current="page" href="../index.html">Inicio</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="ubicacion.html">Ubicación</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="precios.html">Precios</a></li>
+                    <li class="nav-item  ms-5"><a class="nav-link active" aria-current="page" href="galeria.html">Galeria</a></li>
+                </ul>
+            </div>
     </nav>
 
-    <main class="main mainServicios">
-        
-        <h2 class="tituloServicios">  
-            <div  data-aos="fade-up"
-                data-aos-offset="100"
-                data-aos-delay="50"
-                data-aos-duration="2000"
-                data-aos-anchor-placement="top-center">Servicios
-            </div>
-        </h2>
+    <header class="header container contenedorHeader">
+        <div class=" container d-flex flex-column align-items-end justify-content-center ">
+            <h1 class="headerLogo animate__animated animate__tada text-light ">North Paradise</h1>
+            <h2 class="headerSlogan animate__animated animate__fadeInTopLeft text-light">Naturaleza y tranquilidad a pocos minutos de la ciudad</h2>
+        </div> 
+    </header>
 
-        <div class="iconosServicios">
-            <i class="fas fa-user-shield"></i>
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-car"></i>
-            <i class="fas fa-broom"></i>
+    <nav class="nav container">
+        <ul class=" container navItems d-flex justify-content-end align-items-center justify-content-sm-evenly justify-content-lg-end mb-0 ">
+            <li class="btnInicio"> <a href="../index.html">Inicio</a></li>
+            <li class="btnUbicacion"> <a href="ubicacion.html">Ubicación</a></li>
+            <li class="btnServicios"> <a href="servicios.html">Servicios</a></li>
+            <li class="btnPrecios"> <a href="precios.html">Precios</a></li>
+            <li class="btnGaleria"> <a href="galeria.html">Galeria</a></li>
+    </nav>
+
+    <main class="main container mainServicios">
+        <div class=" d-lg-flex justify-content-lg-evenly align-items-lg-center mt-lg-5 mb-lg-5">
+            <h2 class="tituloServicios col-lg-3" ><div data-aos="fade-up-right">Servicios</div>    
+            </h2>
+            <div class="iconosServicios col-lg-3">
+                <i class="fas fa-user-shield"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-car"></i>
+                <i class="fas fa-broom"></i>
+            </div>
+            <article class="mainArticle, mainArticleServicios col-lg-6 ">
+                <p class="textoServicios">La quinta vacacional North Paradise está ubicada dentro del barrio cerrado, que cuenta con control vehicular de ingreso y egreso, recorridas de guardias dentro del barrio y vigilancia por CCTV. Además, se cuenta con cámaras internas accesibles por Smartphone.</p>
+                <p class="textoServicios">La conectividad es un punto fuerte en los servicios, sabemos que es indispensable para el trabajo, el estudio, las comunicaciones y el esparcimiento entre otros, por eso tenemos contratado fibra óptica de 300MB, con Access points distribuidos por toda la superficie.</p>
+                <p class="textoServicios">La propiedad cuenta con tres cocheras cerradas, para la guarda y protección de tus vehículos, además tanto el portón principal de acceso como el de la cochera son automáticos para tu comodidad.</p>
+                <p class="textoServicios">Para que tu experiencia sea completa y no tengas que preocuparte por nada, tenemos servicio de limpieza del hogar, de la pileta y jardinero. Existe variadísima cantidad de oferta gastronómica, de supermercados, farmacias, etc., que se pueden acceder por las Apps de envíos.</p>
+            </article>
         </div>
-    
-        <article class="mainArticle, mainArticleServicios">
-            <p class="textoServicios">La quinta vacacional North Paradise está ubicada dentro del barrio cerrado, que cuenta con control vehicular de ingreso y egreso, recorridas de guardias dentro del barrio y vigilancia por CCTV. Además, se cuenta con cámaras internas accesibles por Smartphone.</p>
-            <p class="textoServicios">La conectividad es un punto fuerte en los servicios, sabemos que es indispensable para el trabajo, el estudio, las comunicaciones y el esparcimiento entre otros, por eso tenemos contratado fibra óptica de 300MB, con Access points distribuidos por toda la superficie.</p>
-            <p class="textoServicios">La propiedad cuenta con tres cocheras cerradas, para la guarda y protección de tus vehículos, además tanto el portón principal de acceso como el de la cochera son automáticos para tu comodidad.</p>
-            <p class="textoServicios">Para que tu experiencia sea completa y no tengas que preocuparte por nada, tenemos servicio de limpieza del hogar, de la pileta y jardinero. Existe variadísima cantidad de oferta gastronómica, de supermercados, farmacias, etc., que se pueden acceder por las Apps de envíos.</p>
-        </article>
     </main>
 
-    <footer class="footer">
+    <footer class=" container footer d-flex flex-column-reverse justify-content-center align-items-center justify-content-sm-between align-items-sm-center flex-lg-row justijy-lg-content-between align-items-lg-center ">
         <h6 class="footerCopyRight">© 2022 todos los derechos reservados</h6>
-        <ul class="socialMediaLinks">
+        <ul class="socialMediaLinks ps-0 sm-mb-0">
             <li class="btnFB"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
             <li class="btnTW"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
             <li class="btnIG"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
             <li class="btnWA"><a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp-square"></i></a></li>
-            <li class="btnMail"><a href="./ubicacion.html"><i class="fas fa-envelope-square"></i></a></li>
+            <li class="btnMail"><a href="../pages/ubicacion.html"><i class="fas fa-envelope-square"></i></a></li>
         </ul>
         <h6 class="footerExternalLink"><a href="https://www.argentina.gob.ar/turismoydeportes" target="_blank">municipio.com/turismo</a></h6>
     </footer>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();

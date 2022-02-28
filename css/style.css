@@ -14,7 +14,7 @@
     background-blend-mode: overlay;
     font-family: 'Courgette', cursive;
     background-size: cover;
-    height: 35vh;
+    height: 30vh;
 }
 
     /*-----NAV-----*/
@@ -49,7 +49,7 @@
 }
 
 .socialMediaLinks{
-    font-size: 5vw;
+    font-size: 3vh;
     display: flex;
     justify-content: space-around;
     list-style-type: none;
@@ -274,6 +274,12 @@
         font-size: 3vh;
         list-style-type: none;
     }
+    .navItems li a{
+        text-decoration: none;
+        color: black;
+        font-size: 3vw;
+        padding-right: 1vw;
+    }    
 
     .mainPanoramica{
         display: flex;
@@ -311,7 +317,7 @@
     }
 
     .socialMediaLinks li i{
-        font-size: 10vh;
+        font-size: vh;
     }
     
     .footerExternalLink{
@@ -448,7 +454,7 @@
 
     .carousel-item img{
         width: 80vw;
-        height: 60vh; 
+        height: 40vh; 
     }
 
     .fotos h2 a{

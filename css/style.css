@@ -1,788 +1,462 @@
-:root{
-    --colorFondoNav: rgb(156, 226, 241)
-}
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
 
-*{
-    margin: 0;
-    padding: 0;
-}
-.body{
-    background: rgb(207,241,249);
-    background: linear-gradient(45deg, rgb(187, 233, 243) 0%, rgba(250,255,253,1) 34%, rgba(181, 240, 207, 0.74) 100%);
-}
+body {
+  background: #cff1f9;
+  background: linear-gradient(45deg, #bbe9f3 0%, #fafffd 34%, rgba(181, 240, 207, 0.74) 100%); }
 
-/*-----HEADER-----*/
-.contenedorHeader{
-    background-image: url('../images/fondoHeaderEditado.jpg');
-    background-color: rgb(100, 100, 100);
-    background-blend-mode: overlay;
-    font-family: 'Courgette', cursive;
-    background-size: cover;
-    height: 30vh;
-}
+/*mixins*/
+.contenedorHeader {
+  background-image: url("../images/fondoHeaderEditado.jpg");
+  background-color: #646464;
+  background-blend-mode: overlay;
+  font-family: 'Courgette', cursive;
+  background-size: cover;
+  height: 30vh;
+  border: white solid white 3px; }
 
-    /*-----NAV-----*/
+@media only screen and (max-width: 575px) {
+  .headerLogo {
+    font-size: 10vw;
+    margin-top: 12vh; }
+  .headerSlogan {
+    font-size: 3.5vw;
+    padding-left: 1vw; } }
 
-.navItems{
-    list-style-type: none;
-}    
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+  .headerLogo {
+    font-size: 8vw;
+    padding-left: 5vw;
+    padding-top: 8vh; }
+  .headerSlogan {
+    font-size: 2.8vw;
+    padding-left: 3vw; } }
 
-.navItems li a{
+@media only screen and (min-width: 992px) {
+  .headerLogo {
+    font-size: 5vw;
+    padding-right: 3vw;
+    padding-top: 10vh;
+    -webkit-text-stroke: 2px #136104; }
+  .headerSlogan {
+    font-size: 1.8vw;
+    padding-right: 3vw; } }
+
+.nav {
+  background-color: #9ce2f1;
+  border-top: white solid white 3px;
+  border-bottom: white solid white 3px;
+  height: 7vh; }
+  .nav .navItems li a {
     text-decoration: none;
     color: black;
-    font-size: 3vw;
-    font-family: 'Permanent Marker', cursive;
-    padding-right: 3vw;
+    font-size: 2vw;
+    font-family: "Permanent Marker", cursive;
+    padding-right: 3vw; }
 
-}
+@media only screen and (max-width: 575px) {
+  .navbar {
+    position: fixed;
+    z-index: 10;
+    margin-top: 2vh;
+    margin-left: 4vw;
+    padding: 0; }
+    .navbar .navbar-toggler-icon, .navbar .navbar-toggler, .navbar .collapse {
+      color: black;
+      font-size: 5vw;
+      background-color: #9ce2f1;
+      font-family: "Permanent Marker", cursive; }
+    .navbar .collapse {
+      border: solid black 3px; }
+    .navbar .nav-item a::before {
+      content: '■  ';
+      color: #e2e258; }
+  .nav {
+    display: none; } }
 
-.mainArticle p, .textoServicios, .sectionLMapa p, .textoPrecios{
-    font-family: 'Courgette', cursive; 
-    color: black;
-}
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+  .navbar {
+    display: none; }
+  .nav {
+    position: sticky;
+    top: 0; }
+    .nav .navItems li a {
+      height: 100%;
+      text-decoration: none;
+      color: black;
+      font-size: 2.5vw;
+      padding-right: 1vw; } }
 
-p::first-letter{
-    font-size: 150%;
-    font-weight: bold;
-    color: rgb(0, 0, 100);
-}
+@media only screen and (min-width: 992px) {
+  .navbar {
+    display: none; }
+  .navItems {
+    animation: aparece 3s; }
+  @keyframes aparece {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+    .navItems li a {
+      font-size: 1.6vw;
+      -webkit-text-stroke: 0.5px white; }
+    .navItems .btnInicio:hover, .navItems .btnUbicacion:hover, .navItems .btnServicios:hover, .navItems .btnPrecios:hover, .navItems .btnGaleria:hover {
+      transform: scale(1.4, 1.4);
+      transition: .3s;
+      text-shadow: #f8f3d8 0vw 0vh 30px; } }
 
-/*-----FOOTER-----*/
-.footer{  
-    border-top: solid rgb(0, 0, 0) 3px;     
-}
-
-.footerCopyRight{
-    color: black;
+.footer {
+  border-top: solid black 3px;
+  height: 18vmin;
+  padding-top: 3vh; }
+  .footer .footerCopyRight {
+    color: #292929;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2vmin;
-}
-
-.socialMediaLinks{
+    font-size: 2vmin; }
+  .footer .socialMediaLinks {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
     width: 80%;
-}
-
-/*  ICONOS FOOTER   */
-.fa-twitter-square{
-    color:  #3b5998;
-}
-.fa-twitter-square{
-    color: #00acee;
-}
-.fa-instagram-square{
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-}
-.fa-whatsapp-square{
-    color:#25D366;
-}
-.fa-envelope-square{
-    color: black;
-}
-
-.tituloFormulario, .tituloServicios, .tituloPrecios, .textoVerifique, .tituloVideo, .fotos h2, .carousel-inner h2{
-    font-family: 'Permanent Marker'; 
-    font-size: 4vw;
-    color: black;
-    width: 100%;   
-    text-align: center;
-    padding: 2vh 0;    
-}
-
+    font-size: 7vmin; }
+    .footer .socialMediaLinks .fa-twitter-square {
+      color: #3b5998; }
+    .footer .socialMediaLinks .fa-twitter-square {
+      color: #00acee; }
+    .footer .socialMediaLinks .fa-instagram-square {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+    .footer .socialMediaLinks .fa-whatsapp-square {
+      color: #25D366; }
+    .footer .socialMediaLinks .fa-envelope-square {
+      color: black; }
 
 @media only screen and (max-width: 575px) {
-
-    .navbar{
-        position:fixed ;
-        z-index: 10;
-        margin-top: 2vh;
-        margin-left: 4vw;
-        padding: 0;
-        border: solid black 3px;
-    }
-
-    .navbar-toggler-icon, .navbar-toggler, .collapse{
-        color: black;
-        font-size: 5vw;
-        background-color: var(--colorFondoNav);   
-    }
-    .nav-item a::before {
-        content: '■  ';
-        color: rgb(226, 226, 88);  
-    }
-
-        .header{
-        height: 25vh;    
-        border: solid white 3px;
-    }
-
-    .headerLogo{ 
-        font-size: 10vw;  
-        margin-top: 8vh;
-    }
-
-    .headerSlogan{
-        font-size: 3.5vw; 
-        padding-left:1 vw; 
-    }
-
-    .nav{
-        display: none;
-    }
-
-    .mainPanoramica img{
-        height: 30vh;
-        width: 100%; 
-        border-radius: 15px;
-        box-shadow: 5px 3px 5px 5px rgba(87, 93, 95, 0.2);
-        margin-top: 3vh;
-    }
-
-    .mainArticle p, .textoServicios, .articleServicios, .parrafoComoLlegar, .articlePrecios p{
-        font-size: 3.5vw;
-        width: 90%;
-        text-align: justify;
-        padding: 1vh 0;    
-    }
-    
-    .footer{
-        height: 18vh;        
-    }
-
-    .socialMediaLinks li i{
-        font-size: 5vh;
-    }
-    .footerExternalLink{
-        display: none;
-    }
-
-    /*Ubicacion*/
-    .formularioPC{
-        display: none;
-    }
-
-    .sectionLMapa iframe{
-        height: 40vh;
-        width: 90%;
-        
-        border-radius:  8vh;   
-        box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
-        margin: 2vh 0;
-    }
-    .tituloComoLlegar{
-        font-size: 3.5vw;
-        font-family: 'Permanent Marker';
-        padding: 2vh 0;
-    }
-
-    .tituloFormulario{
-        text-align: center;
-        padding-top: 1.5vh;
-    }
-
-    .formularioContacto{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .formulario{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2vh 0 4vh 0;
-        width: 90%;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    .fotoIngreso{
-        display: none;
-    }
-
-    /*servicios*/
-
-    .tituloServicios{
-        font-size: 7vw;
-    }
-    
-    .iconosServicios {
-        font-size: 12vw;
-        letter-spacing: 1.5vw ;
-        text-align: center;
-        color: rgb(25, 54, 2) ;
-        -webkit-text-stroke: 2px rgb(255, 255, 255);
-        text-shadow: 0 0 10px ;
-        animation-name: cambioColorIcono;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
-
-    @keyframes cambioColorIcono {
-        0% { color: black;}
-        100% { color: rgb(25, 54, 2); }
-    }
-
-    .mainArticleServicios{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /*precios*/
-
-    .calendario{
-        order: 2;
-    }
-
-    .tituloPrecios{
-        font-size: 7vw;
-    }
-
-    .calendario iframe{
-        width: 90vw;
-        padding-bottom: 3vh;
-    }
-
-    .articlePrecios{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .textoPrecios{
-        width: 90%;
-    }
-
-    .textoVerifique{
-        font-size: 7vw;
-    }
-
-    /*galeria*/
-
-    .carousel-item img, .fotos iframe{
-        width: 95vw;
-        height: 40vh;
-        object-fit: cover;
-    }
-
-    .fotos h2 a{
-        font-family: 'Permanent Marker', cursive;
-        text-decoration: none;
-        font-size: 5vw;
-    }
-}    
+  .footerExternalLink {
+    display: none; } }
 
 @media only screen and (max-width: 991px) and (min-width: 576px) {
-
-    .navbar{
-        display: none;
-    }
-
-    .headerLogo{ 
-        font-size: 8vw;  
-        padding-left: 5vw; 
-        padding-top: 8vh;
-    }
-
-    .headerSlogan{
-        font-size: 2.8vw; 
-        padding-left: 3vw;     
-    }    
-    
-    .nav{
-        background-color: var(--colorFondoNav);  
-        border-top: solid white 3px;  
-        border-bottom: solid white 3px; 
-        height: 7vh;    
-        position: sticky;
-        top: 0;  
-    }  
-
-    .navItems li a{
-        height: 100%;
-        text-decoration: none;
-        color: black;
-        font-size: 2.5vw;
-        padding-right: 1vw;
-    }    
-
-    .mainPanoramica{
-        display: flex;
-        align-items: center;  
-        justify-content: center;
-        padding-bottom: 7vh;      
-    }
-    
-    .mainPanoramica img{
-        height: 45vh;
-        width: 100%; 
-        border-radius: 15px;
-        box-shadow: 5px 3px 5px 5px rgba(87, 93, 95, 0.2);
-        margin-top: 5vh;
-    }
-
-    .mainArticle p, .textoServicios, .articleServicios, .tituloComoLlegar, .textoPrecios{
-        font-size: 2.5vw;
-        width: 95%;
-        text-align: justify;
-        padding-bottom: 3vh;    
-    }
-
-    .footer{
-        height: 25vh;
-    }
-
-    .footerCopyRight{
-        font-size: 2vh;
-        margin-bottom: 2vh;
-    }
-
-    .socialMediaLinks li{
-        margin-top: 5vh;
-    }
-
-    .socialMediaLinks li i{
-        font-size: 6vh;
-    }
-    
-    .footerExternalLink{
-        display: none;
-    }
-
-    /*Ubicacion*/
-
-    .formularioPC{
-        display: none;
-    }
-
-    .tituloComoLlegar{
-        font-family: 'Permanent Marker'; 
-        font-size: 3.5vw;
-        color: black;  
-        text-align: center;
-        margin-top: 4vh;
-    }
-
-    .parrafoComoLlegar{
-        text-align: center;
-        font-size: 2.5vw;
-        padding-bottom: 2vh;
-    }
-    .tituloFormulario{
-        text-align: center;
-        padding-top: 1.5vh;
-    }
-
-    .mapaGoogle{
-        height: 50vh;
-        width: 65vw;
-        margin-top: 5vh;
-        border-radius:  8vh;   
-        box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
-    }
-
-    .sectionLMapa h2{
-        font-family: 'Permanent Marker', cursive;
-        padding-bottom: 1vh;
-    }
-
-    .tituloFormulario{
-        text-align: center;
-        padding-top: 2vh;
-    }
-
-    .formularioContacto{
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 5vh;        
-    }
-    .formulario{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 2vh;
-        width: 90%;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    .fotoIngreso{
-        display: none;
-    }
-
-
-    /*servicios*/
-
-    .tituloServicios{
-        font-size: 7vw;
-        padding-top: 4vh;
-    }
-
-    .iconosServicios {
-        font-size: 10vw;
-        padding-bottom: 3vw;
-        text-align: center;
-        color: rgb(25, 54, 2) ;
-        -webkit-text-stroke: 2px rgb(255, 255, 255);
-        text-shadow: 0 0 10px ;
-    }
-
-    .mainArticleServicios{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    
-    .textoServicios{
-        font-size: 2.5vw;
-    }
-
-    /*precios*/
-
-    .calendario{
-        order: 2;
-    }
-
-    .calendario iframe{
-        width:60vw;        
-        padding: 0 0 5vh 0;
-    }
-
-    .articlePrecios{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tituloPrecios{
-        margin-top: 3vh;
-    }
-
-    .textoPrecios{
-        padding-top: 2vh;
-        width: 90%;
-    }
-
-    .textoVerifique{
-        padding-top: 3vh;
-    }
-
-    /*galeria*/
-
-    .fotos img, .fotos iframe{
-        width: 80vw;
-        height: 40vh;
-        padding-bottom: 2vh;
-    }
-
-
-    .carousel-item img{
-        width: 80vw;
-        height: 40vh; 
-    }
-
-    .fotos h2 a{
-        font-family: 'Permanent Marker', cursive;
-        text-decoration: none;
-        font-size: 3vw;
-    }
-
-}
+  .footerExternalLink {
+    display: none; } }
 
 @media only screen and (min-width: 992px) {
+  .footer .footerCopyRight {
+    font-size: 1vw; }
+  .footer .socialMediaLinks {
+    display: flex;
+    justify-content: space-around;
+    width: 30%; }
+  .footer .btnFB:hover, .footer .btnTW:hover, .footer .btnIG:hover, .footer .btnWA:hover, .footer .btnMail:hover {
+    transform: scale(1.3, 1.3);
+    transition: .3s; }
+  .footer .footerExternalLink a {
+    font-size: 1.2vw;
+    padding-right: 2vw;
+    color: blue; } }
 
-    .navbar{
-        display: none;
-    }
+.mainPanoramica img {
+  height: 35vh;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 5px 3px 5px 5px rgba(87, 93, 95, 0.2);
+  margin: 5vh auto 2vh auto; }
 
-    .headerLogo{ 
-        font-size: 5vw;  
-        padding-right: 3vw;
-        padding-top: 10vh;
-        -webkit-text-stroke: 2px rgb(19, 97, 4);
-    }
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+  .mainPanoramica img {
+    height: 45.5vh; } }
 
-    .headerSlogan{
-        font-size: 1.8vw; 
-        padding-right: 3vw;       
-    }    
-    
-    .nav{
-        background-color: var(--colorFondoNav);  
-        border-top: solid white 3px;  
-        border-bottom: solid white 3px; 
-        height: 7vh;      
-    }
-    
-    .btnInicio:hover, .btnUbicacion:hover, .btnServicios:hover, .btnPrecios:hover, .btnGaleria:hover{
-        transform: scale(1.4, 1.4);
-        transition: .3s;
-        text-shadow: rgb(248, 243, 216) 0vw 0vh 30px;
-    }
+@media only screen and (min-width: 992px) {
+  .mainPanoramica img {
+    height: 70vh;
+    margin-bottom: 5vh; } }
 
-    .navItems{
-        animation: aparece 6s ;
-    }
-    @keyframes aparece {
-        from {
-            opacity: 0;
-        }
-        to{
-            opacity: 1;
-        }
-        
-    }
+.sectionLMapa iframe {
+  height: 45.5vh;
+  width: 90%;
+  border-radius: 8vh;
+  box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
+  margin: 4vh 0; }
 
-    .navItems li a{
-        font-size: 1.6vw;
-        list-style-type: none;
-        -webkit-text-stroke: .5px rgb(255, 255, 255);
-    }
+@media only screen and (max-width: 575px) {
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2vh 0 4vh 0;
+    width: 90%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; }
+    .formulario .formularioContacto {
+      width: 100%;
+      display: flex;
+      flex-direction: column; }
+  .fotoIngreso {
+    display: none; } }
 
-    .mainPanoramica img{
-        height: 65vh; 
-        border-radius: 15px;
-        box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
-        margin-bottom: 5vh;
-    }
-    
-    .mainArticle{
-        margin-top: 4vh;
-        margin-bottom: 3vh;
-    }
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+  .mapaGoogle {
+    height: 52.5vh; }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 2vh;
+    width: 90%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; }
+    .formulario .formularioContacto {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 5vh; }
+  .fotoIngreso {
+    display: none; } }
 
-    .mainArticle p, .textoServicios, .sectionLMapa p, .articleServicios, .textoPrecios{
-        font-size: 1.3vw;
-        width: 90%;
-        text-align: justify; 
-        padding: 2vh 0;    
-    }
-
-    .footer{
-        height: 20vh;
-        border-top: solid 3px black;
-    }
-    
-    .footerCopyRight{
-        font-size: 1vw;
-        margin-bottom: 0%;
-    }
-
-    .socialMediaLinks{
-        display: flex;
-        justify-content: space-around;
-        list-style-type: none;
-        width: 40%;
-    }
-
-    .socialMediaLinks li a i{
-        font-size: 7vh;
-        margin: 0 1vw;
-    }
-
-    .btnFB:hover, .btnTW:hover, .btnIG:hover, .btnWA:hover, .btnMail:hover{
-        transform: scale(1.3, 1.3);
-        transition: .3s;
-    }
-
-    .socialMediaLinks li i{
-        font-size: 6vh;
-    }
-    
-    .footerExternalLink a{
-        font-size: 1.2vw;
-        padding-right: 2vw;
-        color: rgb(1, 1, 105);
-    }
-
-    /*Ubicacion*/
-
-    .mapaGoogle{
-        height: 60vh;
-        width: 75vw;
-        margin-top: 5vh;
-        margin-bottom: 3vh;
-        border-radius:  8vh;   
-        box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
-    }
-
-    .textoComoLLegar{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .sectionLMapa h2{
-        font-family: 'Permanent Marker', cursive;
-        padding: 2vh 5vh;    
-    }
-
-    .formulario{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        width: 30vw;
-        height: 43vh;
-        margin: 5vh 0;
-    }
-
-    .fotoIngreso{
-        width: 30vw;
-        height: 42vh; 
-        border-radius: 15px;
-    }
-
-    .tituloFormulario{
-        text-align: center;
-        -webkit-text-stroke: .5px rgb(255, 255, 255);
-        font-size: 2.5vw;    
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
-        padding-bottom: 2vw;
-        animation: latido 1s infinite;
-    }
-    @keyframes latido {
-        0% { font-size: 2.5vw; }
-        15% { font-size: 2.2vw; }
-        85% { font-size: 2.7vw; }
-        100% { font-size: 2.5vw; }
-    }
-
-    .formularioContacto{
-        width: 30vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;        
-    }
-
-
-
-    .formNombre:focus, .formEmail:focus, .formComentarios:focus{
-        border: .1vw solid green;
-        border-radius: 15px;
-        background-color: rgb(238, 248, 245);
-    }
-    
-    .btnEnviar{
-        background: transparent;
-        border: 3px solid green;
+@media only screen and (min-width: 992px) {
+  .mapaGoogle {
+    height: 59.5vh; }
+  .textoComoLLegar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+  .formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 90%;
+    height: 43vh;
+    margin: 5vh 0; }
+    .formulario .fotoIngreso {
+      width: 30vw;
+      height: 42vh;
+      border-radius: 15px; }
+    .formulario .tituloFormulario {
+      text-align: center;
+      -webkit-text-stroke: 0.5px white;
+      font-size: 2.5vw;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      padding-bottom: 2vw; }
+    .formulario .formularioContacto {
+      width: 30vw;
+      height: 42vh;
+      display: flex;
+      flex-direction: column; }
+    .formulario .formNombre:focus, .formulario .formEmail:focus, .formulario .formComentarios:focus {
+      border: 0.1vw solid #9ce2f1;
+      border-radius: 15px;
+      background-color: #eef8f5; }
+    .formulario .btnEnviar {
+      background-color: transparent;
+      border: 3px solid black;
+      border-radius: 10px;
+      font-size: 1.5vw;
+      font-family: 'Permanent Marker', cursive; }
+      .formulario .btnEnviar:hover {
+        background-color: #9ce2f1;
+        box-shadow: 1vw 1vh 5vh #9ce2f1;
         border-radius: 10px;
         font-size: 1.5vw;
         font-family: 'Permanent Marker', cursive;
-    }
-
-    .btnEnviar:hover{
-        background: rgb(154, 255, 154);
-        box-shadow: 1vw 2vh 6vh rgb(154, 255, 154);
-        border-radius: 10px;
-        font-size: vw;
-        font-family: 'Permanent Marker', cursive;
-        transform: scale(.9,.9);
+        transform: scale(0.95, 0.95);
         cursor: pointer;
-        color: black;
-    }
+        color: black; } }
 
+@media only screen and (max-width: 575px) {
+  .tituloServicios {
+    margin-top: 4vh; }
+  .iconosServicios {
+    font-size: 12vw;
+    letter-spacing: 1.5vw;
+    text-align: center;
+    color: #193602;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0 0 10px;
+    animation-name: cambioColorIcono;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; }
+  @keyframes cambioColorIcono {
+    0% {
+      color: black; }
+    100% {
+      color: #193602; } }
+  .mainArticleServicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; } }
 
-    /*servicios*/
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+  .tituloServicios {
+    font-size: 7vw;
+    padding-top: 4vh; }
+  .iconosServicios {
+    font-size: 10vw;
+    padding-bottom: 3vw;
+    text-align: center;
+    color: #193602;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0 0 10px; }
+  .mainArticleServicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; } }
 
-    .tituloServicios{
-        font-size: 7vw;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
-        -webkit-text-stroke: 1px rgb(255, 255, 255);
-        width: 15vw;
-        text-align: center;
-    }
+@media only screen and (min-width: 992px) {
+  .tituloServicios {
+    font-size: 7vw;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    -webkit-text-stroke: 1px white;
+    width: 15vw;
+    text-align: center; }
+  .iconosServicios {
+    font-size: 7vw;
+    color: #193602;
+    -webkit-text-stroke: 4px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #193602;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0 0 10px;
+    width: 25vw; }
+  .iconosServicios i {
+    padding: 4vh; }
+  .fa-user-shield:hover, .fa-wifi:hover, .fa-car:hover, .fa-broom:hover {
+    transform: scale(1.2, 1.2);
+    color: #9ce2f1; }
+  .mainArticleServicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; } }
 
-    .iconosServicios {
-        font-size: 7vw;        
-        color: rgb(25, 54, 2) ;
-        -webkit-text-stroke: 4px rgb(255, 255, 255);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;  
-        color: rgb(25, 54, 2) ;
-        -webkit-text-stroke: 2px rgb(255, 255, 255);
-        text-shadow: 0 0 10px ; 
-        width: 25vw; 
-        text-align: center;
-    }
+@media only screen and (max-width: 575px) {
+  .mainPrecios .tituloPrecios {
+    font-size: 7vw;
+    margin-top: 4vh; }
+  .mainPrecios .articlePrecios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  .mainPrecios .textoVerifique {
+    font-size: 7vw;
+    margin: 2vh 0; }
+  .mainPrecios .calendario {
+    order: 2; }
+  .mainPrecios .calendario iframe {
+    width: 90vw;
+    margin: 2vh 0; } }
 
-    .iconosServicios i{
-        padding: 4vh;
-    }    
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+  .mainPrecios .tituloPrecios {
+    margin-top: 3vh; }
+  .mainPrecios .articlePrecios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    .mainPrecios .articlePrecios .textoPrecios {
+      padding-top: 2vh;
+      width: 90%; }
+  .mainPrecios .textoVerifique {
+    padding-top: 3vh; }
+  .mainPrecios .calendario {
+    order: 2; }
+  .mainPrecios .calendario iframe {
+    width: 90vw;
+    margin: 3vh 0; } }
 
-    .fa-user-shield:hover, .fa-wifi:hover, .fa-car:hover, .fa-broom:hover{
-        transform: scale(1.2, 1.2);
-        color: green;
-    }
+@media only screen and (min-width: 992px) {
+  .mainPrecios {
+    padding: 5vh 0; }
+    .mainPrecios .tituloPrecios {
+      font-size: 2.5vw;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      -webkit-text-stroke: 1px white;
+      width: auto;
+      text-align: center; }
+    .mainPrecios .articlePrecios {
+      width: 30vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center; }
+    .mainPrecios .textoVerifique {
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      font-family: 'Permanent Marker';
+      font-size: 2.5vw;
+      color: black;
+      -webkit-text-stroke: 0.5px white;
+      width: auto; }
+    .mainPrecios .calendario {
+      width: 30vw;
+      height: 45vh; }
+    .mainPrecios .calendario iframe {
+      width: 30vw;
+      height: 45vh;
+      border-radius: 10px; } }
 
-    .mainArticleServicios{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+@media only screen and (max-width: 575px) {
+  .carousel-item img, .fotos iframe {
+    width: 95vw;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 10px; } }
 
-    /*precios*/
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+  .fotos img, .fotos iframe, .carousel-item img {
+    width: 70vw;
+    height: 50vh;
+    object-fit: cover;
+    padding-bottom: 2vh;
+    border-radius: 10px; } }
 
-    .mainPrecios{
-        padding-top: 3vh;
-    }
-    .calendario{
-        width: 30vw;
-        height: 45vh;        
-    }
+@media only screen and (min-width: 992px) {
+  .carousel-item img, .fotos iframe {
+    width: 80vw;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 10px; } }
 
-    .calendario iframe{
-        width:33vw;
-        height: 45vh;
-        border-radius: 10px;
-    }
+p {
+  font-family: "Courgette", cursive;
+  color: #292929;
+  text-align: justify;
+  padding: 1.5vh 0;
+  width: 90%; }
 
-    .tituloPrecios{
-        font-size: 2.5vw;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
-        -webkit-text-stroke: 2px rgb(255, 255, 255);
-        width:auto;
-        text-align: center;
-    }
-    .articlePrecios{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .textoPrecios{
-        font-size: 1.5vw;
-        padding-bottom: 2vh;
-    }
-    .textoVerifique{
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
-        font-family: 'Permanent Marker'; 
-        font-size: 2.5vw;
-        color: black;
-        -webkit-text-stroke: .5px rgb(255, 255, 255);    
-        width: auto;    
-    }
+p::first-letter {
+  font-size: 150%;
+  font-weight: bold;
+  color: #000064; }
 
-    /*galeria*/
+h3 {
+  font-family: "Permanent Marker", cursive;
+  color: black;
+  text-align: center; }
 
-    .carousel-item img, .fotos iframe{
-        width: 70vw;
-        height: 70vh;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+@media only screen and (max-width: 575px) {
+  p {
+    font-size: 3.5vw; } }
 
-}
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+  p {
+    font-size: 2.5vw; } }
+
+@media only screen and (min-width: 992px) {
+  p {
+    font-size: 1.3vw; } }

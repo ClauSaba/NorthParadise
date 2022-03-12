@@ -1,0 +1,97 @@
+@media only screen and (max-width: 575px) {
+    .mainPrecios{
+        
+        .tituloPrecios{
+            font-size: 7vw;
+            margin-top: 4vh;
+        }
+    
+        .articlePrecios{
+            @include flex (column);
+        }
+
+        .textoVerifique{
+            font-size: 7vw;
+            margin: 2vh 0;
+        }
+
+        .calendario{
+            order: 2;
+        }     
+        
+        .calendario iframe{
+            width: 90vw;
+            margin: 2vh 0;
+        }
+        
+    }    
+}
+
+@media only screen and (max-width: 991px) and (min-width: 576px) {    
+    .mainPrecios{
+
+        .tituloPrecios{
+            margin-top: 3vh;
+        }
+        .articlePrecios{
+            @include flex(column);
+            .textoPrecios{
+                padding-top: 2vh;
+                width: 90%;
+            }
+        }
+        .textoVerifique{
+            padding-top: 3vh;
+        }
+    
+        .calendario{
+            order: 2;
+        }
+
+        .calendario iframe{
+            width:90vw;        
+            margin: 3vh 0;
+        }      
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    
+    .mainPrecios{
+        padding: 5vh 0;
+
+        .tituloPrecios{
+            font-size: 2.5vw;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            -webkit-text-stroke: 1px rgb(255, 255, 255);
+            width:auto;
+            text-align: center;
+        }
+        .articlePrecios{
+            width: 30vw;
+            @include flex(column);
+        }
+
+        .textoVerifique{
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            font-family: 'Permanent Marker'; 
+            font-size: 2.5vw;
+            color: black;
+            -webkit-text-stroke: .5px rgb(255, 255, 255);    
+            width: auto;    
+        }
+
+        .calendario{
+            width: 30vw;
+            height: 45vh;        
+        }
+
+        .calendario iframe{
+            width:30vw;
+            height: 45vh;
+            border-radius: 10px;
+        }
+    }    
+}

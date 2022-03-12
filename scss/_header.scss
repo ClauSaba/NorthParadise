@@ -1,0 +1,47 @@
+.contenedorHeader{
+    background-image: url('../images/fondoHeaderEditado.jpg');
+    background-color: rgb(100, 100, 100);
+    background-blend-mode: overlay;
+    font-family: 'Courgette', cursive;
+    background-size: cover;
+    height: 30vh;
+    border:$borderHeader;
+}
+
+@media only screen and (max-width: 575px) {
+    
+    .headerLogo{ 
+        font-size: 10vw;  
+        margin-top: 12vh;
+    }
+    .headerSlogan{
+        font-size: 3.5vw; 
+        padding-left:1vw; 
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+
+    .headerLogo{ 
+        font-size: 8vw;  
+        padding-left: 5vw; 
+        padding-top: 8vh;
+    }
+
+    .headerSlogan{
+        font-size: 2.8vw; 
+        padding-left: 3vw;     
+    } 
+}
+@media only screen and (min-width: 992px) {
+    .headerLogo{ 
+        font-size: 5vw;  
+        padding-right: 3vw;
+        padding-top: 10vh;
+        -webkit-text-stroke: 2px rgb(19, 97, 4);
+    }
+
+    .headerSlogan{
+        font-size: 1.8vw; 
+        padding-right: 3vw;       
+    }
+}

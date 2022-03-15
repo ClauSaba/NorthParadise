@@ -1,63 +1,44 @@
-@media only screen and (max-width: 575px) {
-    .mainPrecios{
-        
+.mainPrecios{
+    @include pantalla(xs){
         .tituloPrecios{
             font-size: 7vw;
             margin-top: 4vh;
         }
-    
         .articlePrecios{
             @include flex (column);
         }
-
         .textoVerifique{
             font-size: 7vw;
             margin: 2vh 0;
         }
-
         .calendario{
             order: 2;
-        }     
-        
-        .calendario iframe{
+        }            
+        .googleCalendar{
             width: 90vw;
             margin: 2vh 0;
         }
-        
-    }    
-}
+    }
 
-@media only screen and (max-width: 991px) and (min-width: 576px) {    
-    .mainPrecios{
-
+    @include pantalla(sm){
         .tituloPrecios{
             margin-top: 3vh;
         }
         .articlePrecios{
-            @include flex(column);
             .textoPrecios{
                 padding-top: 2vh;
-                width: 90%;
+                width: 70vw;
             }
         }
         .textoVerifique{
             padding-top: 3vh;
+        }  
+        .googleCalendar{
+            width: 70vw;
         }
-    
-        .calendario{
-            order: 2;
-        }
-
-        .calendario iframe{
-            width:90vw;        
-            margin: 3vh 0;
-        }      
     }
-}
 
-@media only screen and (min-width: 992px) {
-    
-    .mainPrecios{
+    @include pantalla(lg){
         padding: 5vh 0;
 
         .tituloPrecios{
@@ -71,8 +52,10 @@
         .articlePrecios{
             width: 30vw;
             @include flex(column);
+            .textoPrecios{
+                width: 30vw;
+            }
         }
-
         .textoVerifique{
             writing-mode: vertical-lr;
             transform: rotate(180deg);
@@ -80,17 +63,11 @@
             font-size: 2.5vw;
             color: black;
             -webkit-text-stroke: .5px rgb(255, 255, 255);    
-            width: auto;    
+            width: auto;     
         }
-
-        .calendario{
-            width: 30vw;
-            height: 45vh;        
-        }
-
-        .calendario iframe{
-            width:30vw;
-            height: 45vh;
+        .googleCalendar{
+            width:35vw;
+            height: 50vh;
             border-radius: 10px;
         }
     }    

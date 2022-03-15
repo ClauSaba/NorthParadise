@@ -15,3 +15,19 @@ $alturaImagenes: 35vh;
     justify-content: space-evenly;
     align-items: center;
 }
+
+/*mapa responsive*/
+
+$responsive:(
+    xs: 0px,
+    sm: 576px,
+    lg: 992px,
+);
+
+@mixin pantalla($breakpoint) {
+    @media only screen and (min-width: map-get($responsive, $breakpoint)){
+        @content;
+    }
+}
+
+/*lista redes sociales*/

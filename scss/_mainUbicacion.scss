@@ -1,104 +1,93 @@
-.sectionLMapa iframe{
-    height: $alturaImagenes*1.3;
-    width: 90%;
-    border-radius:  8vh;   
-    box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
-    margin: 4vh 0;
-}
-
-@media only screen and (max-width: 575px) {
-
-    .formulario{
-        @include flex(column);
-        padding: 2vh 0 4vh 0;
-        width: 90%;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        .formularioContacto{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-    }
-}
-
-    .fotoIngreso{
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 991px) and (min-width: 576px) {
-
+.containerUbicacion{
     .mapaGoogle{
-        height: $alturaImagenes*1.5;
-    }
-    
-    .formulario{
-        @include flex(column);
-        padding-top: 2vh;
+        height: $alturaImagenes*1.3;
         width: 90%;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        .formularioContacto{
+        border-radius:  8vh;   
+        box-shadow: 10px 3px 10px 10px rgba(87, 93, 95, 0.2);
+        margin: 4vh 0;
+    }
+    @include pantalla(xs){
+        .formulario{
+            @include flex(column);
+            padding: 2vh  0;
             width: 90%;
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 5vh;        
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            .formularioContacto{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .fotoIngreso{
+                display: none;
+            }
         }
     }
 
-    .fotoIngreso{
-        display: none;
+//
+    @include pantalla(sm){
+        .mapaGoogle{
+            height: $alturaImagenes*1.5;
+        }
+        
+        .formulario{
+            @include flex(column);
+            width: 90%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            .formularioContacto{
+                width: 90%;
+                display: flex;
+                flex-direction: column;       
+            }
+        }
     }
-}
 
-@media only screen and (min-width: 992px) {
-    .mapaGoogle{
-        height: $alturaImagenes*1.7;
-    }
-
-    .textoComoLLegar{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .formulario{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        width: 90%;
-        height: 43vh;
-        margin: 5vh 0;
-        .fotoIngreso{
-            width: 30vw;
-            height: 42vh; 
-            border-radius: 15px;
+    @include pantalla(lg){
+        .mapaGoogle{
+            height: $alturaImagenes*1.7;
+        }
+        .textoComoLLegar{
+            @include flex(column)
+        }
+        .formulario{
+            @include flex(row);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 40vw;
+            height: 43vh;
+            margin-bottom: 4vh;
+                .fotoIngreso{
+                display: flex;    
+                width: 40vw;
+                height: 40vh; 
+                border-radius: 15px;
+            }
         }
         .tituloFormulario{
             text-align: center;
-            -webkit-text-stroke: .5px rgb(255, 255, 255);
-            font-size: 2.5vw;    
+            -webkit-text-stroke: .5px rgb(255, 255, 255); 
             writing-mode: vertical-lr;
             transform: rotate(180deg);
-            padding-bottom: 2vw;
+            margin: 4vw ;
         }
         .formularioContacto{
             width: 30vw;
-            height: 42vh;
+            height: 40vh;
             display: flex;
-            flex-direction: column;        
-        }.formNombre:focus, .formEmail:focus, .formComentarios:focus{
+            flex-direction: column;   
+            padding-bottom: 1vh;
+            
+
+        }
+        .formNombre:focus, .formEmail:focus, .formComentarios:focus{
             border: .1vw solid $colorFondoNav;
             border-radius: 15px;
             background-color: rgb(238, 248, 245);
         }
-        
         .btnEnviar{
-            background-color: transparent;
-            border: 3px solid black;
-            border-radius: 10px;
-            font-size: 1.5vw;
-            font-family: 'Permanent Marker', cursive;
+        background-color: transparent;
+        border: 3px solid black;
+        border-radius: 10px;
+        font-size: 1.5vw;
+        font-family: 'Permanent Marker', cursive;
             &:hover{
                 background-color: $colorFondoNav;
                 box-shadow: 1vw 1vh 5vh $colorFondoNav;
@@ -112,3 +101,5 @@
         }
     }
 }
+
+//

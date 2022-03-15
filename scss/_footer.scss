@@ -1,16 +1,15 @@
 .footer{  
     border-top: solid rgb(0, 0, 0) 3px;     
     height: 18vmin; 
-    padding-top: 3vh;
+    padding-top: vh;
 
     .footerCopyRight{
         color: $fontColorParrafo;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 2vmin;
-    }
+        font-size: 2vh;
+        }
     .socialMediaLinks{
-        display: flex;
-        justify-content: space-around;
+        @include flex(row);
         list-style-type: none;
         width: 80%;
         font-size: 7vmin;
@@ -32,31 +31,20 @@
             color: black;
         }
     }
-}
-
-@media only screen and (max-width: 575px) {
-
-    .footerExternalLink{
-        display: none;
-    }
-}
-@media only screen and (max-width: 991px) and (min-width: 576px) {
     
     .footerExternalLink{
-        display: none;
+    @include pantalla(xs){
+        font-size:0;
+        }
     }
-}
-@media only screen and (min-width: 992px) {
 
-    .footer{  
-
+    @include pantalla(lg){
         .footerCopyRight{
             font-size: 1vw;
         }
 
         .socialMediaLinks{
-            display: flex;
-            justify-content: space-around;
+            @include flex(center);
             width: 30%;
         }
 
@@ -66,9 +54,11 @@
         }
 
         .footerExternalLink a{
+            display: flex;
             font-size: 1.2vw;
             padding-right: 2vw;
             color: rgb(0, 0, 255);
         }
-    }   
+    }
 }
+

@@ -4,17 +4,10 @@
     border-radius: 15px;
     box-shadow: 5px 3px 5px 5px rgba(87, 93, 95, 0.2);
     margin: 5vh auto 2vh auto;
-}
-
-@media only screen and (max-width: 991px) and (min-width: 576px) {
-    
-    .mainPanoramica img{
+    @include pantalla(sm){
         height: $alturaImagenes*1.30;
     }
-}
-
-@media only screen and (min-width: 992px) {
-    .mainPanoramica img{
+    @include pantalla(lg){
         height: $alturaImagenes*2; 
         margin-bottom: 5vh;
     }

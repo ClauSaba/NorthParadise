@@ -1,5 +1,5 @@
 .video{
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 10px;
 
     @include pantalla(xs){
@@ -12,7 +12,7 @@
         padding-bottom: 2vh;
     }
     @include pantalla(lg){
-        width: 80vw;
+        width: 60vw;
         height: 70vh;
     }
 }

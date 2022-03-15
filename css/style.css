@@ -395,7 +395,7 @@ body {
       border-radius: 10px; } }
 
 .video, .carousel-item img {
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 10px; }
   @media only screen and (min-width: 0px) {
     .video, .carousel-item img {
@@ -408,7 +408,7 @@ body {
       padding-bottom: 2vh; } }
   @media only screen and (min-width: 992px) {
     .video, .carousel-item img {
-      width: 80vw;
+      width: 60vw;
       height: 70vh; } }
 
 p {

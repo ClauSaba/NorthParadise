@@ -59,9 +59,9 @@
             -webkit-text-stroke: 2px rgb(255, 255, 255);
             text-shadow: 0 0 10px ; 
             width: 25vw; 
-        }
-        .iconosServicios i{
+            i{
             padding: 5vh;
+            }
         }    
 
         .fa-user-shield:hover, .fa-wifi:hover, .fa-car:hover, .fa-broom:hover{
@@ -72,5 +72,21 @@
         .mainArticleServicios{
             @include flex(column);
         }
+    }
+    @include pantalla (xl){
+        .tituloServicios{
+            font-size: 96px;
+            width: 100px;
+
+        } 
+        .iconosServicios {
+            width: 200px;
+            margin-top: 50px;
+            i{
+                font-size: 84px;
+                padding:28px;
+                width: 300px;      
+            }  
+        }     
     }
 }

@@ -22,6 +22,7 @@ $responsive:(
     xs: 0px,
     sm: 576px,
     lg: 992px,
+    xl:1200px
 );
 
 @mixin pantalla($breakpoint) {
@@ -30,4 +31,3 @@ $responsive:(
     }
 }
 
-/*lista redes sociales*/

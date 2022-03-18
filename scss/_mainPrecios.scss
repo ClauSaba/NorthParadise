@@ -45,7 +45,7 @@
             font-size: 2.5vw;
             writing-mode: vertical-lr;
             transform: rotate(180deg);
-            -webkit-text-stroke: 1px rgb(255, 255, 255);
+            -webkit-text-stroke: .5px rgb(255, 255, 255);
             width:auto;
             text-align: center;
         }
@@ -70,5 +70,30 @@
             height: 50vh;
             border-radius: 10px;
         }
-    }    
+    }   
+    @include pantalla(xl){
+        padding: 36px 0;
+
+        .tituloPrecios{
+            font-size: 36px;
+            width:100px;
+            padding-left: 30px;
+        }
+        .articlePrecios{
+            width: 450px;
+            .textoPrecios{
+                width:450px;
+            }
+        }
+        .textoVerifique{
+            font-size: 36px;   
+            width: 100px;  
+            padding-left: 30px;  
+        }
+        .googleCalendar{
+            width:450px;
+            height: 300px;
+            border-radius: 10px;
+        }
+    } 
 }

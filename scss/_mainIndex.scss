@@ -1,3 +1,9 @@
+.mainArticle{
+    @include pantalla(lg){
+        padding-top: 3vh;
+    }
+}
+
 .mainPanoramica img{
     height: $alturaImagenes;
     width: 100%; 
@@ -10,5 +16,8 @@
     @include pantalla(lg){
         height: $alturaImagenes*2; 
         margin-bottom: 5vh;
+    }
+    @include pantalla(xl){
+        height: 500px;
     }
 }

@@ -15,6 +15,10 @@
         width: 60vw;
         height: 70vh;
     }
+    @include pantalla(xl){
+        width: 900px;
+        height: 500px;
+    }
 }
 
 .carousel-item img{

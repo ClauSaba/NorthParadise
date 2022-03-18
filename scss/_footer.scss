@@ -1,12 +1,12 @@
 .footer{  
     border-top: solid rgb(0, 0, 0) 3px;     
     height: 18vmin; 
-    padding-top: vh;
+    padding-top: 1vh;
 
     .footerCopyRight{
         color: $fontColorParrafo;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 2vh;
+        font-size: 2vmin;
         }
     .socialMediaLinks{
         @include flex(row);
@@ -58,6 +58,17 @@
             font-size: 1.2vw;
             padding-right: 2vw;
             color: rgb(0, 0, 255);
+        }
+    }
+    @include pantalla(xl){
+        .footerCopyRight{
+            font-size: 12px;
+        }
+        .socialMediaLinks{
+            font-size: 48px;
+        }
+        .footerExternalLink{
+            font-size: 16px;
         }
     }
 }

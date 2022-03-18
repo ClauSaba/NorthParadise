@@ -10,7 +10,6 @@ body {
 
 /*mixins*/
 /*mapa responsive*/
-/*lista redes sociales*/
 .contenedorHeader {
   background-image: url("../images/fondoHeaderEditado.jpg");
   background-color: #646464;
@@ -18,7 +17,17 @@ body {
   font-family: 'Courgette', cursive;
   background-size: cover;
   height: 30vh;
-  border: white solid white 3px; }
+  border: white solid white 3px;
+  position: relative; }
+  @media only screen and (min-width: 0px) {
+    .contenedorHeader {
+      height: 25vh; } }
+  @media only screen and (min-width: 576px) {
+    .contenedorHeader {
+      height: 30vh; } }
+  .contenedorHeader .logoSlogancontainer {
+    height: 100%;
+    padding: 0 6vw 3vh 0; }
   @media only screen and (min-width: 0px) {
     .contenedorHeader .headerLogo {
       font-size: 10vw;
@@ -28,20 +37,20 @@ body {
       padding-left: 1vw; } }
   @media only screen and (min-width: 576px) {
     .contenedorHeader .headerLogo {
-      font-size: 8vw;
-      margin-top: 5vh;
-      padding-left: 5vw; }
+      font-size: 8vw; }
     .contenedorHeader .headerSlogan {
-      font-size: 2.8vw;
-      padding-left: 3vw; } }
+      font-size: 2.8vw; } }
   @media only screen and (min-width: 992px) {
     .contenedorHeader .headerLogo {
       font-size: 5vw;
-      padding-right: 3vw;
       -webkit-text-stroke: 2px #136104; }
     .contenedorHeader .headerSlogan {
-      font-size: 1.8vw;
-      padding-right: 3vw; } }
+      font-size: 1.8vw; } }
+  @media only screen and (min-width: 1200px) {
+    .contenedorHeader .headerLogo {
+      font-size: 72px; }
+    .contenedorHeader .headerSlogan {
+      font-size: 24px; } }
 
 @media only screen and (min-width: 0px) {
   .navbar {
@@ -101,7 +110,12 @@ body {
       .nav .navItems li a {
         font-size: 1.6vw;
         -webkit-text-stroke: 0.5px white;
-        padding-right: 3vw; }
+        padding-right: 3vw; } }
+    @media only screen and (min-width: 992px) and (min-width: 1200px) {
+      .nav .navItems li a {
+        font-size: 24px;
+        padding-right: 36px; } }
+  @media only screen and (min-width: 992px) {
       .nav .navItems .btnInicio:hover, .nav .navItems .btnUbicacion:hover, .nav .navItems .btnServicios:hover, .nav .navItems .btnPrecios:hover, .nav .navItems .btnGaleria:hover {
         transform: scale(1.4, 1.4);
         transition: .3s;
@@ -110,11 +124,11 @@ body {
 .footer {
   border-top: solid black 3px;
   height: 18vmin;
-  padding-top: vh; }
+  padding-top: 1vh; }
   .footer .footerCopyRight {
     color: #292929;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2vh; }
+    font-size: 2vmin; }
   .footer .socialMediaLinks {
     display: flex;
     flex-direction: row;
@@ -155,6 +169,17 @@ body {
       font-size: 1.2vw;
       padding-right: 2vw;
       color: blue; } }
+  @media only screen and (min-width: 1200px) {
+    .footer .footerCopyRight {
+      font-size: 12px; }
+    .footer .socialMediaLinks {
+      font-size: 48px; }
+    .footer .footerExternalLink {
+      font-size: 16px; } }
+
+@media only screen and (min-width: 992px) {
+  .mainArticle {
+    padding-top: 3vh; } }
 
 .mainPanoramica img {
   height: 35vh;
@@ -169,6 +194,9 @@ body {
     .mainPanoramica img {
       height: 70vh;
       margin-bottom: 5vh; } }
+  @media only screen and (min-width: 1200px) {
+    .mainPanoramica img {
+      height: 500px; } }
 
 .containerUbicacion .mapaGoogle {
   height: 45.5vh;
@@ -262,6 +290,24 @@ body {
       cursor: pointer;
       color: black; } }
 
+@media only screen and (min-width: 1200px) {
+  .containerUbicacion .mapaGoogle {
+    height: 400px;
+    margin-top: 50px; }
+  .containerUbicacion .formulario {
+    width: 992px;
+    height: 370px;
+    margin-bottom: 4vh; }
+    .containerUbicacion .formulario .fotoIngreso {
+      width: 420px;
+      height: 300px;
+      border-radius: 15px; }
+    .containerUbicacion .formulario .formularioContacto {
+      width: 420px;
+      height: 300px;
+      display: flex;
+      flex-direction: column; } }
+
 @media only screen and (min-width: 0px) {
   .mainServicios .tituloServicios {
     margin-top: 4vh; }
@@ -323,8 +369,8 @@ body {
     -webkit-text-stroke: 2px white;
     text-shadow: 0 0 10px;
     width: 25vw; }
-  .mainServicios .iconosServicios i {
-    padding: 5vh; }
+    .mainServicios .iconosServicios i {
+      padding: 5vh; }
   .mainServicios .fa-user-shield:hover, .mainServicios .fa-wifi:hover, .mainServicios .fa-car:hover, .mainServicios .fa-broom:hover {
     transform: scale(1.2, 1.2);
     color: #9ce2f1; }
@@ -333,6 +379,18 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center; } }
+
+@media only screen and (min-width: 1200px) {
+  .mainServicios .tituloServicios {
+    font-size: 96px;
+    width: 100px; }
+  .mainServicios .iconosServicios {
+    width: 200px;
+    margin-top: 50px; }
+    .mainServicios .iconosServicios i {
+      font-size: 84px;
+      padding: 28px;
+      width: 300px; } }
 
 @media only screen and (min-width: 0px) {
   .mainPrecios .tituloPrecios {
@@ -370,7 +428,7 @@ body {
       font-size: 2.5vw;
       writing-mode: vertical-lr;
       transform: rotate(180deg);
-      -webkit-text-stroke: 1px white;
+      -webkit-text-stroke: 0.5px white;
       width: auto;
       text-align: center; }
     .mainPrecios .articlePrecios {
@@ -394,6 +452,26 @@ body {
       height: 50vh;
       border-radius: 10px; } }
 
+@media only screen and (min-width: 1200px) {
+  .mainPrecios {
+    padding: 36px 0; }
+    .mainPrecios .tituloPrecios {
+      font-size: 36px;
+      width: 100px;
+      padding-left: 30px; }
+    .mainPrecios .articlePrecios {
+      width: 450px; }
+      .mainPrecios .articlePrecios .textoPrecios {
+        width: 450px; }
+    .mainPrecios .textoVerifique {
+      font-size: 36px;
+      width: 100px;
+      padding-left: 30px; }
+    .mainPrecios .googleCalendar {
+      width: 450px;
+      height: 300px;
+      border-radius: 10px; } }
+
 .video, .carousel-item img {
   object-fit: fill;
   border-radius: 10px; }
@@ -410,6 +488,10 @@ body {
     .video, .carousel-item img {
       width: 60vw;
       height: 70vh; } }
+  @media only screen and (min-width: 1200px) {
+    .video, .carousel-item img {
+      width: 900px;
+      height: 500px; } }
 
 p {
   font-family: "Courgette", cursive;
@@ -417,6 +499,18 @@ p {
   text-align: justify;
   padding: 1.5vh 0;
   width: 90%; }
+  @media only screen and (min-width: 0px) {
+    p {
+      font-size: 3.5vw; } }
+  @media only screen and (min-width: 576px) {
+    p {
+      font-size: 2.5vw; } }
+  @media only screen and (min-width: 992px) {
+    p {
+      font-size: 1.3vw; } }
+  @media only screen and (min-width: 1200px) {
+    p {
+      font-size: 16px; } }
 
 p::first-letter {
   font-size: 150%;
@@ -428,14 +522,8 @@ h3 {
   color: black;
   text-align: center; }
 
-@media only screen and (max-width: 575px) {
-  p {
-    font-size: 3.5vw; } }
-
-@media only screen and (max-width: 991px) and (min-width: 576px) {
-  p {
-    font-size: 2.5vw; } }
-
-@media only screen and (min-width: 992px) {
-  p {
-    font-size: 1.3vw; } }
+/* formato pantalla XL*/
+@media only screen and (min-width: 1200px) {
+  .body {
+    width: 1200px;
+    margin: auto; } }

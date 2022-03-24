@@ -16,6 +16,9 @@
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+                .formComentarios{
+                    resize: none;
+                }
             }
             .fotoIngreso{
                 display: none;
@@ -23,7 +26,6 @@
         }
     }
 
-//
     @include pantalla(sm){
         .mapaGoogle{
             height: $alturaImagenes*1.5;
@@ -74,8 +76,6 @@
             display: flex;
             flex-direction: column;   
             padding-bottom: 1vh;
-            
-
         }
         .formNombre:focus, .formEmail:focus, .formComentarios:focus{
             border: .1vw solid $colorFondoNav;
@@ -123,5 +123,3 @@
         }
     }
 }
-
-//
